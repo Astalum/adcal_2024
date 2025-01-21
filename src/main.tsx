@@ -1,13 +1,12 @@
+import "./index.css";
+import MainPage from "./pages/home";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
 
-const rootElement = document.getElementById("root");
-if (rootElement) {
-	createRoot(rootElement).render(
-		<StrictMode>
-			<App />
-		</StrictMode>,
-	);
-}
+const root = createRoot(document.getElementById("root") as Element);
+
+root.render(
+	<StrictMode>
+		<MainPage />
+	</StrictMode>,
+);
